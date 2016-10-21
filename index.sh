@@ -9,7 +9,8 @@ alias cd-config='cd /opt/lampp/etc';
 alias cd-padmin='cd /opt/lampp/phpmyadmin';
 alias e-padimin='vim /opt/lampp/phpmyadmin/config.inc.php';
 
-
+## initialize:
+alias xampp-install='$ROOT_PATH/initialize.sh';
 
 ##default xampp:
 alias xampp='/opt/lampp/xampp';
