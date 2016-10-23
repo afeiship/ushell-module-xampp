@@ -27,3 +27,8 @@ use mysql;
 UPDATE user SET password=PASSWORD('YOURPASSWORD') WHERE user='root';
 FLUSH PRIVILEGES;
 ```
+
+## IF FAILED,TRY THIS ONE:
+```mysql
+update MySQL.user set authentication_string=password('YOURPASSWORD') where user='root';
+```
