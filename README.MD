@@ -1,34 +1,23 @@
 # ushell-module-xampp
-Unix like shell module for xampp.
+> Unix like shell module for xampp.
 
-## resources:
-+ xampp download url:http://jaist.dl.sourceforge.net/project/xampp/XAMPP%20Linux/7.0.9/xampp-linux-x64-7.0.9-1-installer.run
-+ 5.6.14: http://dlc2.pconline.com.cn/filedown_53771_7004758/gEmHoqN4/xampp-linux-5.6.14-0-installer.run
+[![version][version-image]][version-url]
+[![license][license-image]][license-url]
+[![download][download-image]][download-url]
 
-## create new db & import .sql file:
-```mysql:
-create database bitnami_wordpress;
-use bitnami_wordpress;
-source /tmp/bitnami_wordpress2016-10-21.sql;
-
-use bitnami_wordpress;
-update wp_options set option_value='http://www.demo.com/' where option_id=36;
-update wp_options set option_value='http://www.demo.com/' where option_id=1;
-update wp_options set option_value='http://www.demo.com/' where option_id=2;
-update wp_options set option_value='http://www.demo.com/' where option_id=23741;
-
-
-select * from wp_options limit 1,20;
+## installation
+```shell
+npm i -S @jswork/ushell-module-xampp
 ```
 
-## udpate mysql password:
-```mysql
-use mysql;
-UPDATE user SET password=PASSWORD('YOURPASSWORD') WHERE user='root';
-FLUSH PRIVILEGES;
-```
+## license
+Code released under [the MIT license](https://github.com/afeiship/ushell-module-xampp/blob/master/LICENSE.txt).
 
-## IF FAILED,TRY THIS ONE:
-```mysql
-update MySQL.user set authentication_string=password('YOURPASSWORD') where user='root';
-```
+[version-image]: https://img.shields.io/npm/v/@jswork/ushell-module-xampp
+[version-url]: https://npmjs.org/package/@jswork/ushell-module-xampp
+
+[license-image]: https://img.shields.io/npm/l/@jswork/ushell-module-xampp
+[license-url]: https://github.com/afeiship/ushell-module-xampp/blob/master/LICENSE.txt
+
+[download-image]: https://img.shields.io/npm/dm/@jswork/ushell-module-xampp
+[download-url]: https://www.npmjs.com/package/@jswork/ushell-module-xampp
